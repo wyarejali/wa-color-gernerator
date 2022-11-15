@@ -1,0 +1,98 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #f1f5f8;
+  font-family: sans-serif;
+  padding: 10px 0;
+}
+section.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header p {
+  margin: 10px 0;
+  color: #ff5a38;
+}
+
+input {
+  outline: none;
+  background: #fff;
+  border: 1px solid #01a38b;
+  border-right-width: 0px;
+  padding: 10px 10px;
+}
+
+input.error {
+  border-color: #ff5a38;
+}
+
+button[type='submit'] {
+  padding: 10px;
+  outline: none;
+  border: 1px solid #01a38b;
+  background: #01a38b;
+  color: #fff;
+  border-left-width: 0px;
+  cursor: pointer;
+}
+
+button[type='submit']:hover {
+  background: #ff5a38;
+  border-color: #ff5a38;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+
+.colorbox {
+  position: relative;
+  height: 120px;
+}
+
+.copybtn {
+  position: absolute;
+  background: transparent;
+  color: #333;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+
+.copybtn.light {
+  color: #fff;
+}
+
+.colorbox:hover .copybtn {
+  opacity: 1;
+}
+
+@media (max-width: 425px) {
+  .colors {
+    grid-template-columns: auto auto auto auto;
+  }
+  .colorbox {
+    height: 80px;
+  }
+
+  .copybtn {
+    font-size: 14px;
+  }
+}
